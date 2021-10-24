@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node seeders/seed.js && node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "homepage": "https://github.com/SheylaPopovich/kinetic-census#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongojs": "^3.1.0",
     "mongoose": "^6.0.12"
   }
 }

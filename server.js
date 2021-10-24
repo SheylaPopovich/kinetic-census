@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+// const db = require("./models");
+
 
 const PORT = process.env.PORT || 3000;
 
@@ -13,14 +15,18 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { 
   useNewUrlParser: true,
-  // useFindAndModify: false
+  useFindAndModify: true,
+  useCreateIndex: true,
+  useUnifiedTopology: false
 });
 
 
-const db = require("../kinetic-census/Develop/models");
+app.use(require("./Develop/routes/apiRoutes"));
+app.use(require("./Develop/routes/htmlRoutes"));
 
-require("./Develop/routes/apiRoutes")(app);
-require("./Develop/routes/htmlRoutes")(app);
+
+// require("./Develop/routes/apiRoutes")(app);
+// require("./Develop/routes/htmlRoutes")(app);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);

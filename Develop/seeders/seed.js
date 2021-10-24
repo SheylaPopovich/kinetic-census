@@ -13,7 +13,7 @@ mongoose.connect(
 .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));
 
-const workoutSeed = [
+let workoutSeed = [
   {
     day: new Date(new Date().setDate(new Date().getDate() - 9)),
     exercises: [
