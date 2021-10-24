@@ -11,17 +11,30 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnessDB", { useNewUrlParser: true,
-useFindAndModify: false
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { 
+  useNewUrlParser: true,
+  // useFindAndModify: false
 });
 
 
-// const db = require("./models");
+// const db = require("../kinetic-census/Develop/models");
 
-// require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
+// require("./Develop/routes/apiRoutes")(app);
+// require("./Develop/routes/htmlRoutes")(app);
+
+
+
+
+// app.listen(PORT, () => {
+//   console.log(`App running on port ${PORT}!`);
+// });
+
+
+const db = require("../kinetic-census/Develop/models");
+
+require("./Develop/routes/apiRoutes")(app);
+require("./Develop/routes/htmlRoutes")(app);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
-

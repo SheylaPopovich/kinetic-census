@@ -2,14 +2,16 @@ const mongoose = require('mongoose');
 const db = require('../models');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/fitnessDB',
+  process.env.MONGODB_URI || 'mongodb://localhost/workout',
   {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+    // useUnifiedTopology: true,
+    // useCreateIndex: true,
+    // useFindAndModify: false
   }
-);
+)
+.then(() => console.log("MongoDB successfully connected"))
+  .catch(err => console.log(err));
 
 const workoutSeed = [
   {
