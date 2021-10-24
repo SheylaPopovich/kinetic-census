@@ -2,9 +2,10 @@
   "name": "kinetic-census",
   "version": "1.0.0",
   "description": "fitness tracker",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/SheylaPopovich/kinetic-census/issues"
   },
-  "homepage": "https://github.com/SheylaPopovich/kinetic-census#readme"
+  "homepage": "https://github.com/SheylaPopovich/kinetic-census#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  }
 }
