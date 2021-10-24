@@ -16,10 +16,10 @@ useFindAndModify: false
 });
 
 
-const db = require("./models");
+// const db = require("./models");
 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+// require("./routes/apiRoutes")(app);
+// require("./routes/htmlRoutes")(app);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
