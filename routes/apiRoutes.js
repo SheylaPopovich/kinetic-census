@@ -1,8 +1,10 @@
-var db = require("../models");
+const Workout = require("../models/workout");
 
-module.exports = function (app) {
-  app.get("/api/workouts", (req, res) => {
-    db.Workout.find({})
+const router = require("express").Router();
+
+
+  router.get("/api/workouts", (req, res) => {
+    Workout.find({})
       .then((workout) => {
         res.json(workout);
       })
@@ -10,18 +12,31 @@ module.exports = function (app) {
         res.json(err);
       });
   });
-  app.post("/api/workouts", async (req, res) => {
-    try {
-      const response = await db.Workout.create({ type: "workout" });
-      res.json(response);
-    } catch (err) {
-      console.log("error occurred creating a workout: ", err);
-    }
-  });
-  app.put("/api/workouts/:id", ({ body, params }, res) => {
+
+
+  // router.post("/api/workouts",  (req, res) => {
+  //   try {
+  //     db.Workout.create({ type: "workout" });
+  //     res.json(response);
+  //   }
+  // });
+
+
+router.post("/api/workouts", (req, res) => {
+Workout.create({})
+ .then((workout) => {
+  res.json(workout);
+})
+.catch((err) => {
+  res.json(err);
+});
+});
+
+
+  router.put("/api/workouts/:id", ({ body, params }, res) => {
     const workoutId = params.id;
     let savedExercises = [];
-    db.Workout.find({ _id: workoutId })
+    Workout.find({ _id: workoutId })
       .then((dbWorkout) => {
         savedExercises = dbWorkout[0].exercises;
         res.json(dbWorkout[0].exercises);
@@ -34,7 +49,7 @@ module.exports = function (app) {
       });
 
     function updateWorkout(exercises) {
-      db.Workout.findByIdAndUpdate(
+      Workout.findByIdAndUpdate(
         workoutId,
         { exercises: exercises },
         function (err, doc) {
@@ -45,8 +60,9 @@ module.exports = function (app) {
       );
     }
   });
-  app.get("/api/workouts/range", (req, res) => {
-    db.Workout.find({})
+
+  router.get("/api/workouts/range", (req, res) => {
+    Workout.find({}).limit(7)
       .then((workout) => {
         res.json(workout);
       })
@@ -54,4 +70,5 @@ module.exports = function (app) {
         res.json(err);
       });
   });
-};
+
+   module.exports= router; 

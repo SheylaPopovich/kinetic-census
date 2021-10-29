@@ -25,7 +25,7 @@
   "homepage": "https://github.com/SheylaPopovich/kinetic-census#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongojs": "^3.1.0",
-    "mongoose": "^6.0.12"
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0"
   }
 }
