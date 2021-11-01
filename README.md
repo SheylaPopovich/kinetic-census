@@ -28,22 +28,20 @@ This project emphasizes the use of MongoDB, mongoose, morgan, and express, to dy
     <img src="https://img.shields.io/badge/express-yellow" />
     <img src="https://img.shields.io/badge/Express Session-pink"/>
 </p>
-<br
->
-### Dev Dependencies
+<br>
+
+Dev Dependencies
 <p>
     <img src="https://img.shields.io/badge/Nodemon-red" />
     <img src="https://img.shields.io/badge/Morgan-purple"  />
 </p>
+<br>
 
 ## **Project** 
-This [Demo Video]() will walk you through the application and its usage.
+This [Demo Video](https://drive.google.com/file/d/1i7VbA2BFISFNT3BGGKqA8MmmOXLZ7jnG/view) will walk you through the application and its usage.  <a href="https://morning-river-62971.herokuapp.com/"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
+<br>
 
-<p>
-    <a href="https://get-flexed.herokuapp.com/"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
-</p>
-
-![Screenshot of Website](assets\landing-demo.png)
+![Screenshot of Website](assets\screenshoot_app.png)
 ## Licence
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br>
