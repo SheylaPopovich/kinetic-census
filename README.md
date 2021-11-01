@@ -30,7 +30,7 @@ This project emphasizes the use of MongoDB, mongoose, morgan, and express, to dy
 </p>
 <br
 >
-#### Dev Dependencies
+### Dev Dependencies
 <p>
     <img src="https://img.shields.io/badge/Nodemon-red" />
     <img src="https://img.shields.io/badge/Morgan-purple"  />
@@ -43,7 +43,7 @@ This [Demo Video]() will walk you through the application and its usage.
     <a href="https://get-flexed.herokuapp.com/"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
 </p>
 
-![Screenshot of Website]()
+![Screenshot of Website](assets\landing-demo.png)
 ## Licence
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br>
