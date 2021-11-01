@@ -9,7 +9,7 @@
 <br>
 
 ## Description
-This project emphasizes the use of MongoDB, mongoose, morgan, and express, to dynamically update a fitness tracking app.
+This project emphasizes the use of MongoDB, mongoose, morgan, and express, to dynamically update a fitness tracking app. This app is used to track fitness activity of the user and display recent results for the past 7 days in graphical format on the dashboard page. Designed for those looking for motivation to keep going with their fitness routine.
 <br>
 
 ## **Technologies**
