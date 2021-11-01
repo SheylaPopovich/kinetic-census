@@ -43,7 +43,7 @@ This [Demo Video]() will walk you through the application and its usage.
     <a href="https://get-flexed.herokuapp.com/"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
 </p>
 
-![Screenshot of Website](./public/images/getflexed-site.JPG)
+![Screenshot of Website]()
 ## Licence
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br>
